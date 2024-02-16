@@ -47,7 +47,7 @@ header > h2 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: ; */
+  
   }
 
   .receive-message{
@@ -68,10 +68,13 @@ header > h2 {
     margin-bottom: 25px;
     }
 
-    input label {
-      gap: 100px
+    .label1 {
+     margin-right: 150px;
     }
 
+   /* .label2 {
+   margin-right: 25px
+   } */
 
 .message-box {
     /* background-color: white;
@@ -90,8 +93,9 @@ header > h2 {
     display: flex;
     border: 75px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 75px;
+    justify-content: center;
   }
 
 
