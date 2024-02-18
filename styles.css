@@ -37,17 +37,14 @@ header > h2 {
 
 
   .message-selection-box {
-    /* display: flex; */
     background-color: white;
     border-radius: 10px;
     width: 500px;
     height: 100px;
-    /* border: 1px solid black; */
-    /* padding: 20px; */
     display: flex;
     align-items: center;
     flex-direction: column;
-    /* justify-content: ; */
+  
   }
 
   .receive-message{
@@ -68,20 +65,11 @@ header > h2 {
     margin-bottom: 25px;
     }
 
-    input label {
-      gap: 100px
+    .label1 {
+     margin-right: 150px;
     }
 
-
 .message-box {
-    /* background-color: white;
-    border-radius: 10px;
-    height: 100px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items:center ;
-    justify-content: center; */
     background-color: white;
     border-radius: 10px;
     height: 125px;
@@ -90,15 +78,33 @@ header > h2 {
     display: flex;
     border: 75px;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-top: 75px;
+    justify-content: center;
   }
 
-
+.hidden{
+  display:none
+}
 
 .meditating{
   height: 50px;
   width: 50px;
   margin: auto
 }
-  
+
+.delete-message{
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-color: #134d71;
+    margin-bottom: 5px;
+    width: 200px;
+    border-radius: 5px;
+    justify-content: center;
+
+}
+
+.button-section{
+  display: flex;
+}
