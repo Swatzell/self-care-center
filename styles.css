@@ -83,11 +83,28 @@ header > h2 {
     justify-content: center;
   }
 
-
+.hidden{
+  display:none
+}
 
 .meditating{
   height: 50px;
   width: 50px;
   margin: auto
 }
-  
+
+.delete-message{
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background-color: #134d71;
+    margin-bottom: 5px;
+    width: 200px;
+    border-radius: 5px;
+    justify-content: center;
+
+}
+
+.button-section{
+  display: flex;
+}

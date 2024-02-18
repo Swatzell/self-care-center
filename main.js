@@ -1,7 +1,9 @@
-var affirmationButton = document.querySelector("#affirmation")
-var mantraButton = document.querySelector("#mantra")
+var affirmationButton = document.querySelector("#affirmation");
+var mantraButton = document.querySelector("#mantra");
 var recieveMessageButton = document.querySelector(".receive-message")
-var messageBox = document.querySelector(".message-box")
+var messageBox = document.querySelector(".message-box");
+var deleteMessageButton = document.querySelector(".delete-message");
+var confirmationMessage = document.querySelector(".confirmation-message");
 
 
 
@@ -11,7 +13,36 @@ var affirmations = [' I forgive myself and set myself free', ' I believe I can b
 var mantras = ['I am the sky, the rest is weather', ' Onward and upward', ' The only constant is change', ' Yesterday is not today', ' This too shall pass', ' Breathing in, I send myself love', ' Breathing out, I send love to someone else who needs it', ' Don’t let yesterday take up too much of today', ' Every day is a second chance', ' Tell the truth and love everyone', ' I am free from sadness', ' I am enough', ' In the beginning it is you, in the middle it is you and in the end it is you', ' I love myself', ' I am present now', ' Inhale the future, exhale the past']
 
 
+  // Create a delete button and add an event listener to it
+//   var deleteButton = document.createElement('button');
+//   deleteButton.className = 'delete-message';
+//   deleteButton.textContent = 'Delete this message';
+//   deleteButton.addEventListener('click', function() {
+//     // Remove the message and show a confirmation
+//     messageBox.innerHTML = '';
+//     alert('The message has been removed.');
+//   });
+
+//   // Display the message along with the delete button
+//   messageBox.innerHTML = message + ' ' + deleteButton.outerHTML;
+// }
+
+
+
+
+
 recieveMessageButton.addEventListener('click', showResult)
+deleteMessageButton.addEventListener('click', messageBoxHandler)
+// function() {
+//  confirmationMessage.innerHTML = 'Congrats! The message has been removed';
+// });
+
+function messageBoxHandler(){
+  // document.querySelector(".meditating").classList.add("hidden");
+  confirmationMessage.innerHTML = 'Congrats! The message has been removed'
+
+
+}
 
 
 function random(messages){
@@ -19,17 +50,15 @@ function random(messages){
  var randomMessage = messages[randomMessageIndex]
 
 return randomMessage
-}
-
-
+ }
 function showResult(){
   if(affirmationButton.checked){
     var randomAffirmation = random(affirmations);
-    messageBox.innerHTML = `${randomAffirmation}`
+    confirmationMessage.innerHTML = `${randomAffirmation}`
   } 
   else if(mantraButton.checked){
      var randomMantra = random(mantras)
-     messageBox.innerHTML = `${randomMantra}`
+     confirmationMessage.innerHTML = `${randomMantra}`
   }
+  document.querySelector(".meditating").classList.add("hidden")
 }
-
